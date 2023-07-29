@@ -7,7 +7,17 @@
    - [card animation](#card-animation)
 4. [📢 Project review](#-project-review)
 
-<br>
+<br />
+
+## 💻프로젝트 소개
+
+apple 클론 코딩을 해본 후 제품을 홍보하는 웹 사이트로서 
+사용자에게 좀 더 흥미를 이끌 수 있는 UI를 고민하다 만든 apple display입니다. <br />
+vanila javascript로 만들었으며 이미지가 여러 방면에서 움직이는 시각적인 부분을 강조하였습니다. 
+
+<br />
+
+## 🧾code review
 
 #### transform animation
 > box1에 위치한 movebox가 스크롤이 생기는 동시에 box2로 이동하는 애니메이션 구현
@@ -39,4 +49,47 @@ window.addEventListener('scroll',function(){
 
 ```
 반응형에도 적절히 y축 이동한다.
-아쉬운점은 javascript가 실시간 렌더링이 안되다 보니 화면 크기를 줄인 후 새로 고침을 해야 한다.
+아쉬운점은 javascript가 실시간 렌더링이 안되다 보니 화면 크기를 줄인 후 새로 고침을 해야 한다
+
+<br />
+
+#### card animation
+>scroll을 내리면 3개의 카드가 순차적으로 사라짐
+1. 마찬가지로 각 카드의 Y축을 구한다.
+2. 스크롤이 각 카드의 y축 이상이 될 때 해당 카드에 scale과 opacity style을 적용한다.
+
+
+```javascript
+
+const card1 = document.querySelector(".card1"),
+      card2 = document.querySelector(".card2"),
+      card3 = document.querySelector(".card3");
+
+window.addEventListener("scroll", function () {
+  if (scrollY > 2138) {
+    card1.style.transform = "scale(0.9)";
+    card1.style.opacity = "1";
+  }
+  if (scrollY > 2238) {
+    card1.style.transform = "scale(0.8)";
+    card1.style.opacity = "0.5";
+  }
+  if (scrollY > 2338) {
+    card1.style.opacity = "0";
+  }
+  //카드 2
+  if (scrollY > 2642) {
+    card2.style.transform = "scale(0.9)";
+    card2.style.opacity = "1";
+  }
+  if (scrollY > 2742) {
+    card2.style.transform = "scale(0.8)";
+    card2.style.opacity = "0.5";
+  }
+  if (scrollY > 2842) {
+    card2.style.opacity = "0";
+  }
+});
+
+
+```
