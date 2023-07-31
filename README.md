@@ -149,7 +149,7 @@ Input.addEventListener("input", function () {
 });
 ```
 
-### 반응형 side menu
+#### 반응형 side menu
 
 > screen이 480px 됐을 시 나타나는 side menu
 
