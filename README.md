@@ -12,13 +12,17 @@
 
 ## 💻 프로젝트 소개
 
-![image](https://github.com/future9061/apple-display/assets/132829711/6b4ee03c-0cfb-4f45-96af-b4b102bfe705)
+<div align="center">
+   <img src="https://github.com/future9061/apple-display/assets/132829711/6b4ee03c-0cfb-4f45-96af-b4b102bfe705">
 
-https://future9061.github.io/apple-display/
+   https://future9061.github.io/apple-display/
 
-apple 클론 코딩을 해본 후 제품을 홍보하는 웹 사이트로
-사용자에게 좀 더 흥미를 이끌 수 있는 UI를 고민하다 만든 apple display입니다. <br />
-vanilla javascript로 만들었으며 이미지가 여러 방면에서 움직이는 시각적인 부분을 강조하였습니다.
+   apple 클론 코딩을 해본 후 제품을 홍보하는 웹 사이트로
+   사용자에게 좀 더 흥미를 이끌 수 있는 UI를 고민하다 만든 apple display입니다. <br />
+   vanilla javascript로 만들었으며 이미지가 여러 방면에서 움직이는 시각적인 부분을 강조하였습니다.
+   breackpoint는 1024px 480px 입니다.
+
+</div>
 
 <br />
 
@@ -145,9 +149,9 @@ Input.addEventListener("input", function () {
 });
 ```
 
-### 반응형-side-menu
+### 반응형 side menu
 
-> screen이 992px이 됐을 시 나타나는 side menu
+> screen이 480px 됐을 시 나타나는 side menu
 
 ```javascript
 const sideMenuBtn = document.querySelector(".burger_wrap");
