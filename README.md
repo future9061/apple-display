@@ -82,10 +82,10 @@ window.addEventListener("scroll", function () {
 });
 ```
 
-반응형에도 적절히 y축 이동한다.
-아쉬운점은 javascript가 실시간 렌더링이 안되다 보니 화면 크기를 줄인 후 새로 고침을 해야 한다.
-
-<br />
+> 🚫 수정!!
+> getBoundingClientRect는 window 에서의 y축이 아니라, 뷰포트에서의 y 축을 구해주는 프로퍼티여서 스크롤에 따라 값이 변하기 때문에 정확한 y축의 값을 주지 않았다
+> 좀 더 간단한 방법으로 부모요소와 자식 요소의
+> <br />
 
 #### card animation
 
@@ -99,11 +99,9 @@ window.addEventListener("scroll", function () {
 const card1 = document.querySelector(".card1"),
   card2 = document.querySelector(".card2");
 
-let { y: card1Y } = card1.getBoundingClientRect(),
-  { y: card2Y } = card2.getBoundingClientRect();
+let { y: card1Y } = card1.getBoundingClientRect();
 
-let card1Value = card1Y / 3;
-let card2Value = card2Y / 3;
+let card1Value = Math.abs(card1Y / 4);
 
 window.addEventListener("scroll", function () {
   if (scrollY > card1Value * 2) {
@@ -116,19 +114,21 @@ window.addEventListener("scroll", function () {
   }
   if (scrollY > card1Value * 4) {
     card1.style.opacity = "0";
+  }
+  if (scrollY >= card1Value * 4.5) {
+    //card2와 card1이 가깝기 때문에 y 값을 0.5씩 함
     card2.style.transform = "scale(0.9)";
     card2.style.opacity = "1";
   }
-  if (scrollY > card2Value * 4) {
+  if (scrollY >= card1Value * 5) {
     card2.style.transform = "scale(0.8)";
     card2.style.opacity = "0.5";
   }
+  if (scrollY >= card1Value * 5.5) {
+    card2.style.opacity = "0";
+  }
 });
 ```
-> 🚫 수정!!
-> getBoundingClientRect는 window 에서의 y축이 아니라, 뷰포트에서의 y 축을 구해주는 프로퍼티여서 스크롤에 따라 값이 변하기 때문에 정확한 y축의 값을 주지 않았다
-> window 기준에서 y축을 구해야한다.
-
 
 #### input event
 

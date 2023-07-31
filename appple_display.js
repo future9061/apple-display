@@ -34,11 +34,9 @@ window.addEventListener("scroll", function () {
 const card1 = document.querySelector(".card1"),
   card2 = document.querySelector(".card2");
 
-let { y: card1Y } = card1.getBoundingClientRect(),
-  { y: card2Y } = card2.getBoundingClientRect();
+let { y: card1Y } = card1.getBoundingClientRect();
 
-let card1Value = card1Y / 3;
-let card2Value = card2Y / 3;
+let card1Value = Math.abs(card1Y / 4);
 
 window.addEventListener("scroll", function () {
   if (scrollY > card1Value * 2) {
@@ -51,12 +49,17 @@ window.addEventListener("scroll", function () {
   }
   if (scrollY > card1Value * 4) {
     card1.style.opacity = "0";
+  }
+  if (scrollY >= card1Value * 4.5) {
     card2.style.transform = "scale(0.9)";
     card2.style.opacity = "1";
   }
-  if (scrollY > card2Value * 4) {
+  if (scrollY >= card1Value * 5) {
     card2.style.transform = "scale(0.8)";
     card2.style.opacity = "0.5";
+  }
+  if (scrollY >= card1Value * 5.5) {
+    card2.style.opacity = "0";
   }
 });
 
