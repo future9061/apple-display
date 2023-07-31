@@ -6,7 +6,7 @@
    - [transform animation](#transform-animation)
    - [card animation](#card-animation)
    - [input event](#input-event)
-   - [반응형 side menu](#반응형-slide-menu)
+   - [반응형 side menu](#반응형-side-menu)
 
 <br />
 
@@ -27,6 +27,8 @@
 <br />
 
 ## 🧾 code review
+
+<br />
 
 #### sub menu slide
 
@@ -61,6 +63,8 @@
 
 ```
 
+<br />
+
 #### transform animation
 
 > box1에 위치한 movebox가 스크롤이 생기는 동시에 box2로 이동하는 애니메이션 구현
@@ -91,7 +95,7 @@ window.addEventListener("scroll", function () {
 ```
 
 
-> <br />
+<br />
 
 #### card animation
 
@@ -135,6 +139,8 @@ window.addEventListener("scroll", function () {
 });
 ```
 
+<br />
+
 #### input event
 
 > input에 유저가 내용을 입력하면 마치 타이핑 하는 것처럼 div에 나타나게 한다.
@@ -148,6 +154,8 @@ Input.addEventListener("input", function () {
   showCode.innerHTML = userText;
 });
 ```
+
+<br />
 
 #### 반응형 side menu
 
