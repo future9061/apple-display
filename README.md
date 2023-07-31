@@ -12,7 +12,11 @@
 
 ## 💻 프로젝트 소개
 
-apple 클론 코딩을 해본 후 제품을 홍보하는 웹 사이트로서
+![image](https://github.com/future9061/apple-display/assets/132829711/6b4ee03c-0cfb-4f45-96af-b4b102bfe705)
+
+https://future9061.github.io/apple-display/
+
+apple 클론 코딩을 해본 후 제품을 홍보하는 웹 사이트로
 사용자에게 좀 더 흥미를 이끌 수 있는 UI를 고민하다 만든 apple display입니다. <br />
 vanilla javascript로 만들었으며 이미지가 여러 방면에서 움직이는 시각적인 부분을 강조하였습니다.
 
@@ -82,9 +86,7 @@ window.addEventListener("scroll", function () {
 });
 ```
 
-> 🚫 수정!!
-> getBoundingClientRect는 window 에서의 y축이 아니라, 뷰포트에서의 y 축을 구해주는 프로퍼티여서 스크롤에 따라 값이 변하기 때문에 정확한 y축의 값을 주지 않았다
-> 좀 더 간단한 방법으로 부모요소와 자식 요소의
+
 > <br />
 
 #### card animation
@@ -115,8 +117,7 @@ window.addEventListener("scroll", function () {
   if (scrollY > card1Value * 4) {
     card1.style.opacity = "0";
   }
-  if (scrollY >= card1Value * 4.5) {
-    //card2와 card1이 가깝기 때문에 y 값을 0.5씩 함
+  if (scrollY >= card1Value * 4.5) { //card2와 card1이 가깝기 때문에 y 값을 0.5씩 함
     card2.style.transform = "scale(0.9)";
     card2.style.opacity = "1";
   }
