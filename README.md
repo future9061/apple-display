@@ -17,11 +17,12 @@
 
    https://future9061.github.io/apple-display/
 
+   <p align="start">
    apple 클론 코딩을 해본 후 제품을 홍보하는 웹 사이트로
    사용자에게 좀 더 흥미를 이끌 수 있는 UI를 고민하다 만든 apple display입니다. <br />
    vanilla javascript로 만들었으며 이미지가 여러 방면에서 움직이는 시각적인 부분을 강조하였습니다.
    breackpoint는 1024px 480px 입니다.
-
+   </p>
 </div>
 
 <br />
